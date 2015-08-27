@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+
+	<title>Arjuna</title>
+
+	<!-- my stylesheets -->
+	<link href="./stylesheet/otherpages.css" rel="stylesheet" type="text/css">
+	<link href="./stylesheet/nav_menu.css" rel="stylesheet" type="text/css">
+	<link href="./stylesheet/whirl.css" rel="stylesheet" type="text/css">
+	<!--popup-->
+	<link rel="stylesheet" href="./stylesheet/pop-login.css">
+	<link rel="stylesheet" href="./stylesheet/login.css">
+	
+	<script type="text/javascript">
+	 	
+		function changecontent(page){
+		$("#article-content").hide();
+				
+		switch(page){
+		case "Genesis":closer();$("#statement").show();document.getElementById('contentgenesis').style.display='block';
+			       break;	
+		case "Vision":closer();$("#statement").show();document.getElementById('contentvision').style.display='block';
+			       break;	
+		case "Mission":	closer();$("#statement").show();document.getElementById('contentmission').style.display='block';				
+			       break;
+		case "Leader":	closer();$("#statement").show();document.getElementById('contentleader').style.display='block';				
+			       break;
+		case "Reach":	closer();$("#statement").show();document.getElementById('contentreach').style.display='block';			
+			       break;
+		case "About":	closer();$("#statement").show();document.getElementById('contentabout').style.display='block';$("#slider2_container1").show(	);				
+			       break;
+		case "Services":closer();$("#statement").show();document.getElementById('contentourservices').style.display='block';					
+			       break;
+		case "Value":closer();$("#statement").show();document.getElementById('contentvalue').style.display='block';					
+			       break;
+		case "Career":closer();$("#statement").show();document.getElementById('contentcareer').style.display='block';					
+			       break;
+		case"Wisdom":closer();$("#statement").show();document.getElementById('contentwisdom').style.display='block';					
+			       break;
+		case"Mentoring":closer();$("#statement").show();document.getElementById('contentmentoring').style.display='block';					
+			       break;
+		case "Arjuna":closer();$("#statement").show();document.getElementById('contentarjuna').style.display='block';					
+			       break;
+		case "Enlightenment":closer();$("#statement").show();document.getElementById('contentenlightenment').style.display='block';					
+			       break;
+		case "Example":closer();$("#statement").show();document.getElementById('contentexample').style.display='block';					
+			       break;
+		case "Environment":closer();$("#statement").show();document.getElementById('contentenvironment').style.display='block';					
+			       break;
+		case "Engagement":closer();$("#statement").show();document.getElementById('contentengagement').style.display='block';					
+			       break;
+		case "Problem":closer();$("#statement").show();document.getElementById('contentproblem').style.display='block';					
+			       break;
+}}		
+        </script>
+	<script type="text/javascript">function displayhome(){$("#article-content").show();$("#statement").hide();}</script>
+	
+	<script>function closer(){$("#contentabout").hide();$("#contentvision").hide();$("#contentmission").hide();$("#contentleader").hide();$("#contentreach").hide();$("#contentabout").hide();$("#contentgenesis").hide();
+	$("#contentourservices").hide();$("#contentvalue").hide();$("#contentcloser").hide();$("#contentcareer").hide();$("#contentwisdom").hide();$("#contentmentoring").hide();$("#contentarjuna").hide();
+	$("#contentsolutions").hide();$("#contentenlightenment").hide();$("#contentexample").hide();$("#contentenvironment").hide();$("#contentengagement").hide();$("#contentproblem").hide();$("#slider2_container1").hide();}
+</script>
+	<script src='./script/jquery.min.js'></script>
+	<script type="text/javascript">
+		function fadeOut(form, welcome){
+			form.style.opacity = 1;
+
+			(function fade() {
+				if ((form.style.opacity -= .1) < 0) {
+					form.style.display = "none";
+				} else {
+					requestAnimationFrame(fade);
+				}
+			})();
+			form.style.webkitTransform = "translateY(100px)";
+			form.style.msTransform = "translateY(100px)";
+			form.style.transform = "translateY(100px)";
+			welcome.style.webkitTransform = "translateY(100px)";
+			welcome.style.msTransform = "translateY(100px)";
+			welcome.style.transform = "translateY(100px)";
+		}
+		function pop(div1,div2) {
+			document.getElementById(div1).style.display = 'block';
+			document.getElementById(div2).style.display = 'block';
+		}
+		function hide(div1,div2) {
+			document.getElementById(div1).style.display = 'none';
+			document.getElementById(div2).style.display = 'none';
+		}
+		//To detect escape button
+		document.onkeydown = function(evt) {
+			evt = evt || window.event;
+			if (evt.keyCode == 27) {
+				hide('popDiv');
+			}
+		};
+	</script>
+	<!-- Footer -->
+	<link rel="stylesheet" href="./stylesheet/footer-distributed-with-address-and-phones.css">
+	<link rel="stylesheet" href="./font-awesome-4.3.0/css/font-awesome.min.css">
+
+	<!-- font-awesome for icons in the navigation menu -->
+	<link rel="stylesheet" href="./font-awesome/css/font-awesome.css" />
+
+	<!-- google font -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700|Handlee" />
+</head>
+
+<body class="homepage_menu">
+
+	<!--login-popup-->
+	<div id="overlay-layer"></div>
+	<div id="login-page-layer">
+			<a href="#" onClick="hide('login-page-layer','overlay-layer')" onClick="hide('overlay-layer')" class="cancel">&times;</a>
+			<div class="wrapper">
+			<div class="container">
+				<h1 id="welcome">Welcome</h1>
+				<form id="form1">
+					<input type="text" placeholder="Username">
+					<input type="password" placeholder="Password">
+					<button type="submit" id="login-button" onClick="fadeOut(form1,welcome)">Login</button>
+				</form>
+			</div>
+			<ul class="bg-bubbles">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="top-navbar">
+		<div id="arjuna-text">
+			<strong >Arjuna Group</strong>
+		</div>
+
+		<div class="logo">
+			<img src="./images/logo.gif">
+		</div>
+
+		<nav id="quote">
+			<em>Culture of Excellence & Ethics<br>
+				with the Spirit of Selfless Service</em>
+		</nav>
+
+		<nav id="login-area">
+			<a href="#" onClick="pop('login-page-layer','overlay-layer')" onClick="pop('overlay-layer')" class="log-in">Log In</a>
+			<a href="#" class="sign-up">Sign Up</a>
+		</nav>
+	</div>
+
+	<nav id="colorNav">
+		<div id="stbox">
+			<strong>Studentthinkbox</strong>
+		</div>
+
+		<ul class="menu">
+			<li class="green">
+				<a href="index1.htm" class="icon-home" onclick="displayhome();"> Home</a>
+				<ul class="submenu">
+					<li><a href="#" onclick="displayhome();">Home</a></li>
+				</ul>
+			</li>
+						<li class="white">
+				<a href="about_us.htm" class="icon-search" onclick="changecontent('About');"> About Us</a>
+				<ul class="submenu">
+					<li><a href="#" onclick="changecontent('Genesis');">Genesis</a></li>
+					<li><a href="#" onclick="changecontent('Vision');">Vision</a></li>
+					<li><a href="#" onclick="changecontent('Mission');">Mission</a></li>
+					<li><a href="#" onclick="changecontent('Leader');">Leadership</a></li>
+					<li><a href="#" onclick="changecontent('Reach');">Reach & Presence</a></li>
+				</ul>
+			</li>
+			<li class="red">
+				<a href="our_services.htm" class="icon-globe" onclick="changecontent('Services');"> Our Services</a>
+				<ul class="submenu">
+					<li><a href="our_services.htm" onclick="changecontent('Value');">Value Education</a></li>
+					<li><a href="our_services.htm" onclick="changecontent('Career');">Career Counseling</a></li>
+					<li><a href="our_services.htm" onclick="changecontent('Wisdom');">Wisdom Literatures</a></li>
+					<li><a href="our_services.htm" onclick="changecontent('Mentoring');">Mentoring Students</a></li>
+					<li><a href="our_services.htm" onclick="changecontent('Arjuna');">Arjuna Homes</a></li>
+				</ul>
+			</li>
+			<li class="blue">
+				<a href="our_publications.htm" class="icon-book"> Our Publications</a>
+				<ul class="submenu">
+					<li><a href="our_publications.htm">Art of Concentration</a></li>
+					<li><a href="our_publications.htm">Time Management</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a href="our_solutions.htm" class="icon-cloud" > Our Solutions</a>
+				<ul class="submenu">
+					<li><a href="our_solutions.htm" onclick="changecontent('Problem');">Problem</a></li>
+					<li><a href="our_solutions.htm" onclick="changecontent('Enlightenment');">Enlightenment</a></li>
+					<li><a href="our_solutions.htm" onclick="changecontent('Example');">Example</a></li>
+					<li><a href="our_solutions.htm" onclick="changecontent('Environment');">Environment</a></li>
+					<li><a href="our_solutions.htm" onclick="changecontent('Engagement');">Engagement</a></li>
+				</ul>
+			</li>
+			<li class="purple">
+				<a href="#" class="icon-phone"> Contact Us</a>
+				<ul class="submenu">
+					<li><a href="#">Contact us</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+<!-- ************************************************
+				things being used in slider
+									starts
+		**********************************************   -->
+	<!-- it works the same with all jquery version from 1.x to 2.x -->
+	<script type="text/javascript" src="./slider/jquery-1.9.1.min.js"></script>
+	<!-- use jssor.slider.mini.js (40KB) instead for release -->
+	<!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
+	<script type="text/javascript" src="./slider/jssor.js"></script>
+	<script type="text/javascript" src="./slider/jssor.slider.js"></script>
+	<script>
+			jQuery(document).ready(function ($) {
+					var options = {
+							$AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+							$AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+							$PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+
+							$ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+							$SlideDuration: 800,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+							$MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+							//$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+							//$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+							$SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
+							$DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+							$ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+							$UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+							$PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+							$DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+							$ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
+									$Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+									$ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+									$AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+									$Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
+							},
+
+							$ThumbnailNavigatorOptions: {
+									$Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+									$ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+									$ActionMode: 1,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
+									$AutoCenter: 0,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
+									$Lanes: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
+									$SpacingX: 3,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+									$SpacingY: 3,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+									$DisplayPieces: 9,                              //[Optional] Number of pieces to display, default value is 1
+									$ParkingPosition: 260,                          //[Optional] The offset position to park thumbnail
+									$Orientation: 1,                                //[Optional] Orientation to arrange thumbnails, 1 horizental, 2 vertical, default value is 1
+									$DisableDrag: false                            //[Optional] Disable drag or not, default value is false
+							}
+					};
+
+					var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+					//responsive code begin
+					//you can remove responsive code if you don't want the slider scales while window resizes
+					function ScaleSlider() {
+							var bodyWidth = document.body.clientWidth;
+							if (bodyWidth)
+									jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 980));
+							else
+									window.setTimeout(ScaleSlider, 30);
+					}
+					ScaleSlider();
+
+					$(window).bind("load", ScaleSlider);
+					$(window).bind("resize", ScaleSlider);
+					$(window).bind("orientationchange", ScaleSlider);
+					//responsive code end
+			});
+	</script>
+	<!-- ************************************************
+					things being used in slider
+											ends
+			**********************************************   -->
+
+
+<!-- **************************
+						Slider ends
+		************************** -->
+	</div>
+	<script type="text/javascript">
+	 	var header=getElementById("contentgenesis");
+		var articleblocker=getElementById("article-content);
+		header.style.display="block";
+			     articleblocker.style.display="none";
+		function changecontent(page){
+		var header=getElementById("contentgenesis");
+		var articleblocker=getElementById("article-content);
+	        switch(page){
+		case "Genesis": header.style.display="block";
+			     articleblocker.style.display="none";
+			     break;
+}}		
+        </script>
+	 
+
+
+
+
+	<div id="statement" style="font-size:18px;text-align:center;display: block" >
+		 <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="jqueryfin.js"></script>
+    <script type="text/javascript" src="jssor.js"></script>
+    <script type="text/javascript" src="jssor.slider.js"></script>
+        <div id="contentabout">
+		<h1>ABOUT US</h1>
+		<p>Today's  world has no deficiency of facilities, amenities, luxuries.. dearth is of selfless service attitude. It is this selfless spirit which the group stands for. Student life is the tender age where the ideologies formed are carried over throughout one's life.. It is very unfortunate that today's students are given a very self-centric, egoistic, unrealistic world view. It is not surprising to see, therefore, that the student community is susceptible to vices of all sorts. Wisdom tells us that a student leading a life of purity would become a great servant-leader for the world in future.</p>
+ 		<p>ARJUNA Group is meant to serve the student community by systematically giving them education and training in the values for principle centered living. Purity can't be sustained without devotion to God.</p>
+ 		<p>The group in a secular way encourages service to God and humanity. With a view to achieve the aforementioned purposes, the group publishes and distributes ARJUNA books.</p>
+	</div>    
+        <div id="slider2_container1" style="position: relative; top:-400px;  width: 602px; height: 331px; background: #484848; overflow: visible; ">
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: relative;background: linear-gradient(#888888,white); top: 29px;margin-left: auto ;margin-right: auto ; width: 1343px; height: 300px; border: 1px solid gray; -webkit-filter: blur(0px); background-color: #fff; overflow: hidden;">
+            <div>
+                <div style="margin: 10px; overflow: visible; color: #000;"><h1>Genesis</h1><ul>
+			<li>ARJUNA Group( a non-profit initiative) is a group of successful and selfless individual , who have a passion to serve the student community.</li><li> The group was founded in the year 2013 by a team of IITians. The balance of personal success and selfless service is what the group strives for.</li>
+	        	</ul>
+			</div>
+                <div u="thumb" >Genesis</div>
+            </div>
+            <div>
+                <div style="margin: 10px; overflow: visible; color: #000;"><h1>Vision</h1>
+		<p>A country where youths value and practice the importance of Character, Competence and Devotion & spread it to the whole world.</p></div>
+                <div u="thumb">vision</div>
+            </div>
+            <div>
+                <div style="margin: 10px; overflow: visible; color: #000;"><h1>Mission</h1>
+		<p>To spread the culture of excellence and ethics amidst the student community with the spirit of selfless service</p></div>
+                <div u="thumb">Mission</div>
+            </div>
+            <div>
+                <div style="margin: 10px; overflow: visible; color: #000; background: "><h1>Leadership</h1>
+		<p>CONTENT NOT READY</p></div>
+                <div u="thumb">Leadership</div>
+            </div>
+            <div>
+                <div style="margin: 10px; overflow: visible; color: #000;"><h1>Outreach</h1>
+		<ul><li>50000 students touched</li><li>10000 books distributed</li><li>In 10 cities across India</li></div>
+                <div u="thumb">Reach and Presence</div>
+            </div>
+	    	
+	     
+        </div>
+        <!--#region ThumbnailNavigator Skin Begin -->
+        <link href="./stylesheet/slider.css" rel="stylesheet" type="text/css">
+	
+
+        <div u="thumbnavigator" class="jssort12" style="margin-left: auto ;margin-right: auto ;">
+            <!-- Thumbnail Item Skin Begin -->
+            <div u="slides" style="cursor: default; margin-left: auto ;margin-right: auto ; border-left: 1px solid yellow;">
+                <div u="prototype" class="p">
+                    <div class=w><div u="thumbnailtemplate" class="c"></div></div>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+        <!--#endregion ThumbnailNavigator Skin End -->
+
+        <a style="display: none" href="http://www.jssor.com">Bootstrap Slider</a>
+    </div>
+    <!-- Jssor Slider End -->
+		<div id="contentgenesis">
+		<h1>Genesis</h1><ul>
+		<li>ARJUNA Group( a non-profit initiative) is a group of successful and selfless individual , who have a passion to serve the 			student community.</li><li> The group was founded in the year 2013 by a team of IITians. The balance of personal success and 			selfless service is what the group strives for.</li>
+	        </ul>
+		</div>
+		<div id="contentvision">
+		<h1>Vision</h1>
+		<p>A country where youths value and practice the importance of Character, Competence and Devotion & spread it to the whole world.</p>
+		</div>	
+		<div id="contentmission">
+		<h1>Mission</h1>
+		<p>To spread the culture of excellence and ethics amidst the student community with the spirit of selfless service</p>
+		</div>
+		<div id="contentleader">
+		<h1>Leadership</h1>
+		<p>CONTENT NOT READY</p>
+		</div>
+		<div id="contentreach">
+		<h1>Outreach</h1>
+		<ul><li>50000 students touched</li><li>10000 books distributed</li><li>In 10 cities across India</li>
+		</div>
+		
+
+
+
+		</div>
+	</div>
+	
+	<div id="contenthome">
+	
+	</div>
+	<div id="footer">
+		<ul class="f1">
+			<span>New Footer</span>
+			<li><div class="f11"></div></li>
+			<li><div class="f12"></div></li>
+			<li><div class="f13"></div></li>
+			<li><div class="f14"></div></li>
+		</ul>
+	</div>
+
+	<!-- Footer goes here -->
+	<footer class="footer-distributed">
+			<div class="footer-left">
+				<img src="./images/logo.gif">
+				<div class="footer-group-about">
+					<b>Arjuna</b> Group (a non-profit initiative) is a group of successful and selfless individuals, who have a passion to serve the student community. The group was founded in the year 2013 by a team of <b>IITians</b>. The balance of personal success and selfless service is what the group strives for.
+				</div>
+				<div class="footer-social">
+					<div class="footer-icons">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<a href="#"><i class="fa fa-github"></i></a>
+					</div>
+				</div>
+				<p class="footer-group-copyright">Arjuna &copy; 2015</p>
+			</div>
+			<div class="line1"></div>
+			<div class="footer-middle">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p class="footer-address"><span style="font-size: 14px;">#1, Karunambigai Colony, East Mada Street</span><br> Velachery, Chennai, India</p>
+				</div>
+				<div>
+					<i class="fa fa-phone"></i>
+					<p class="footer-phone">+91 44 1234 5678</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p class="footer-mail"><a href="mailto:info.arjunagroup@gmail.com">info.arjunagroup@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="line2"></div>
+			<div class="footer-right">
+				<span><em><b>About Arjuna</b></em></span>
+				<ul>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">News & Announcements</a></li>
+					<li><a href="#">FAQs</a></li>
+					<li><a href="#">Donate to Arjuna</a></li>
+				</ul>
+			</div>
+		</footer>
+
+</body>
+</html>

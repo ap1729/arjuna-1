@@ -1,0 +1,22 @@
+#overlay-layer{
+  background-color: rgba(5, 5, 5, 0.5);
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  width: 100px;
+  z-index: 20;
+  position: absolute;
+  top: 50%;
+  left: 4000%;
+  overflow: hidden;
+  transform:scale(20);
+  display: none;
+}
+#login-page-layer{
+  position: fixed;
+  top: 52%;
+  left: -5%;
+  width: 1.3%;
+  z-index: 21;
+  display: none;
+}

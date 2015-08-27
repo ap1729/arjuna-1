@@ -1,0 +1,221 @@
+html{
+	background:url('../images/background.jpg') #fefefe;
+	position:absolute;
+}
+
+body{
+  padding: 0 0 0;
+	font:14px/1.3 'Segoe UI',Arial, sans-serif;
+	min-height:500px;
+}
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#54a6de;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+section, nav{
+	display: block;
+}
+/*----------------------------
+	The Navigation Menu
+-----------------------------*/
+#colorNav{
+	display: block;
+	position: fixed;
+	top: 55px;
+	left: 0%;
+	right: 0%;
+	padding: 6px;
+	height: 6.5%;
+	width: 8432%;
+	background-color: #00BFFF;
+	z-index: 1;
+}
+#stbox{
+	position: absolute;
+	top: 11px;
+	left: 0.05%;
+	width: 7%;
+	font-size: 25px;
+	color: #4B0082;
+}
+#colorNav > ul{
+	position: absolute;
+	left: 0.3%;
+	top: 37px;
+	width: 1.2%; /* Increase when adding more menu items */
+	margin:0 auto;
+}
+
+#colorNav > ul > li{ /* will style only the top level li */
+	-webkit-box-shadow: 4px -4px 5px -2px rgba(0,0,255,0.75);
+	-moz-box-shadow: 4px -4px 5px -2px rgba(0,0,255,0.75);
+	box-shadow: 4px -4px 5px -2px rgba(0,0,255,0.75);
+	display: inline-block;
+	line-height: 18px;
+	margin: 1px;
+	/*border: solid 1px;
+	border-color: #483D8B;*/
+	border-radius: 6px 6px 6px 20px;
+	position:relative;
+	transform: translateY(-25px);
+	z-index: 2;
+	width: 11%;
+}
+
+#colorNav > ul > li > a{
+	color:inherit;
+	font-size:100%;
+	padding:5px 5px 5px 5px;
+	width: 96%;
+	height: 100% !important;
+	text-decoration:none !important;
+}
+
+#colorNav > ul > li > a:hover{
+	transform: scale(1.09);
+	color: white;
+}
+#colorNav > ul > li:hover{
+	transform: scale3d(1.5 1.5 1.5);
+}
+
+#colorNav > ul > li > ul > li > a:hover{
+	transform: scale(1.1);
+}
+
+#colorNav li ul{
+	position:absolute;
+	list-style:none;
+	text-align:center;
+	width:180px;
+	left:50%;
+	margin-left:-90px;
+	top:70px;
+	font:bold 12px 'Open Sans Condensed', sans-serif;
+
+	/* This is important for the show/hide CSS animation */
+	max-height:0px;
+	overflow:hidden;
+
+	-webkit-transition: all 0.4s ease-out;
+	-moz-transition: all 0.4s ease-out;
+	-o-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+}
+
+#colorNav li ul li{
+	background-color:#FFE4B5;
+	border-radius: 6px 6px 6px 12px !important;
+}
+
+#colorNav li ul li a{
+	padding:8px;
+	font-size: 15px;
+	color:#191970;
+	text-decoration:none !important;
+	display:block;
+}
+#colorNav li ul li a:hover{
+	color: white;
+}
+
+#colorNav li ul li:nth-child(odd){ /* zebra stripes */
+	background-color:#FFF0F5;
+}
+
+#colorNav li ul li:hover{
+	background-color:#444;
+}
+
+#colorNav li ul li:first-child{
+	border-radius:3px 3px 0 0;
+	margin-top:25px;
+	position:relative;
+}
+
+#colorNav li ul li:first-child:before{ /* the pointer tip */
+	content:'';
+	position:absolute;
+	width:1px;
+	height:1px;
+	border:5px solid transparent;
+	border-bottom-color:#313131;
+	left:50%;
+	top:-10px;
+	margin-left:-5px;
+}
+
+#colorNav li ul li:last-child{
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+/* This will trigger the CSS */
+/* transition animation on hover */
+
+#colorNav li:hover ul{
+	position: absolute;
+	top: 50%;
+	left: 20%;
+	max-height:400px; /* Increase when adding more dropdown items */
+	z-index: 1;
+}
+
+/*----------------------------
+	Color Themes
+-----------------------------*/
+#colorNav li.green{
+	/* This is the color of the menu item */
+	background-color:#D8BFD8;
+
+	/* This is the color of the icon */
+	color:#127a5d;
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+#colorNav li.white{
+	background-color:#B0E0E6;
+	color:#aa2a52;
+	position: relative;
+	top: 0px;
+	left: 5px;
+}
+
+#colorNav li.red{
+	background-color:#B0E0E6;
+	color:#aa2a52;
+	position: relative;
+	top: 0px;
+	left: 10px;
+}
+#colorNav li.blue{
+	background-color:#ADD8E6;
+	color:#2884a2;
+	position: relative;
+	top: 0px;
+	left: 15px;
+}
+#colorNav li.yellow{
+	background-color:#87CEFA;
+	color:#ab8426;
+	position: relative;
+	top: 0px;
+	left: 20px;
+}
+#colorNav li.purple{
+	background-color:#B0C4DE;
+	color:#9f3c85;
+	position: relative;
+	top: 0px;
+	left: 25px;
+}

@@ -1,0 +1,889 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+
+	<title>Arjuna</title>
+
+	<!-- my stylesheets -->
+	<link href="./stylesheet/homepage.css" rel="stylesheet" type="text/css">
+	<link href="./stylesheet/nav_menu.css" rel="stylesheet" type="text/css">
+	<link href="./stylesheet/whirl.css" rel="stylesheet" type="text/css">
+	<!--popup-->
+	<link rel="stylesheet" href="./stylesheet/pop-login.css">
+	<link rel="stylesheet" href="./stylesheet/login.css">
+	
+	<script type="text/javascript">
+	 	
+		function changecontent(page){
+		$("#article-content").hide();
+				
+		switch(page){
+		case "Genesis":closer();$("#statement").show();document.getElementById('contentgenesis').style.display='block';
+			       break;	
+		case "Vision":closer();$("#statement").show();document.getElementById('contentvision').style.display='block';
+			       break;	
+		case "Mission":	closer();$("#statement").show();document.getElementById('contentmission').style.display='block';				
+			       break;
+		case "Leader":	closer();$("#statement").show();document.getElementById('contentleader').style.display='block';				
+			       break;
+		case "Reach":	closer();$("#statement").show();document.getElementById('contentreach').style.display='block';			
+			       break;
+		case "About":	closer();$("#statement").show();document.getElementById('contentabout').style.display='block';$("#slider2_container1").show(	);				
+			       break;
+		case "Services":closer();$("#statement").show();document.getElementById('contentourservices').style.display='block';					
+			       break;
+		case "Value":closer();$("#statement").show();document.getElementById('contentvalue').style.display='block';					
+			       break;
+		case "Career":closer();$("#statement").show();document.getElementById('contentcareer').style.display='block';					
+			       break;
+		case"Wisdom":closer();$("#statement").show();document.getElementById('contentwisdom').style.display='block';					
+			       break;
+		case"Mentoring":closer();$("#statement").show();document.getElementById('contentmentoring').style.display='block';					
+			       break;
+		case "Arjuna":closer();$("#statement").show();document.getElementById('contentarjuna').style.display='block';					
+			       break;
+		case "Enlightenment":closer();$("#statement").show();document.getElementById('contentenlightenment').style.display='block';					
+			       break;
+		case "Example":closer();$("#statement").show();document.getElementById('contentexample').style.display='block';					
+			       break;
+		case "Environment":closer();$("#statement").show();document.getElementById('contentenvironment').style.display='block';					
+			       break;
+		case "Engagement":closer();$("#statement").show();document.getElementById('contentengagement').style.display='block';					
+			       break;
+		case "Problem":closer();$("#statement").show();document.getElementById('contentproblem').style.display='block';					
+			       break;
+}}		
+        </script>
+	<script type="text/javascript">function displayhome(){$("#article-content").show();$("#statement").hide();}</script>
+	
+	<script>function closer(){$("#contentabout").hide();$("#contentvision").hide();$("#contentmission").hide();$("#contentleader").hide();$("#contentreach").hide();$("#contentabout").hide();$("#contentgenesis").hide();
+	$("#contentourservices").hide();$("#contentvalue").hide();$("#contentcloser").hide();$("#contentcareer").hide();$("#contentwisdom").hide();$("#contentmentoring").hide();$("#contentarjuna").hide();
+	$("#contentsolutions").hide();$("#contentenlightenment").hide();$("#contentexample").hide();$("#contentenvironment").hide();$("#contentengagement").hide();$("#contentproblem").hide();$("#slider2_container1").hide();}
+</script>
+	<script src='./script/jquery.min.js'></script>
+	<script type="text/javascript">
+		function fadeOut(form, welcome){
+			form.style.opacity = 1;
+
+			(function fade() {
+				if ((form.style.opacity -= .1) < 0) {
+					form.style.display = "none";
+				} else {
+					requestAnimationFrame(fade);
+				}
+			})();
+			form.style.webkitTransform = "translateY(100px)";
+			form.style.msTransform = "translateY(100px)";
+			form.style.transform = "translateY(100px)";
+			welcome.style.webkitTransform = "translateY(100px)";
+			welcome.style.msTransform = "translateY(100px)";
+			welcome.style.transform = "translateY(100px)";
+		}
+		function pop(div1,div2) {
+			document.getElementById(div1).style.display = 'block';
+			document.getElementById(div2).style.display = 'block';
+		}
+		function hide(div1,div2) {
+			document.getElementById(div1).style.display = 'none';
+			document.getElementById(div2).style.display = 'none';
+		}
+		//To detect escape button
+		document.onkeydown = function(evt) {
+			evt = evt || window.event;
+			if (evt.keyCode == 27) {
+				hide('popDiv');
+			}
+		};
+	</script>
+	<!-- Footer -->
+	<link rel="stylesheet" href="./stylesheet/footer-distributed-with-address-and-phones.css">
+	<link rel="stylesheet" href="./font-awesome-4.3.0/css/font-awesome.min.css">
+
+	<!-- font-awesome for icons in the navigation menu -->
+	<link rel="stylesheet" href="./font-awesome/css/font-awesome.css" />
+
+	<!-- google font -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700|Handlee" />
+</head>
+
+<body class="homepage_menu">
+
+	<!--login-popup-->
+	<div id="overlay-layer"></div>
+	<div id="login-page-layer">
+			<a href="#" onClick="hide('login-page-layer','overlay-layer')" onClick="hide('overlay-layer')" class="cancel">&times;</a>
+			<div class="wrapper">
+			<div class="container">
+				<h1 id="welcome">Welcome</h1>
+				<form id="form1">
+					<input type="text" placeholder="Username">
+					<input type="password" placeholder="Password">
+					<button type="submit" id="login-button" onClick="fadeOut(form1,welcome)">Login</button>
+				</form>
+			</div>
+			<ul class="bg-bubbles">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="top-navbar">
+		<div id="arjuna-text">
+			<strong >Arjuna Group</strong>
+		</div>
+
+		<div class="logo">
+			<img src="./images/logo.gif">
+		</div>
+
+		<nav id="quote">
+			<em>Culture of Excellence & Ethics<br>
+				with the Spirit of Selfless Service</em>
+		</nav>
+
+		<nav id="login-area">
+			<a href="#" onClick="pop('login-page-layer','overlay-layer')" onClick="pop('overlay-layer')" class="log-in">Log In</a>
+			<a href="#" class="sign-up">Sign Up</a>
+		</nav>
+	</div>
+
+	<nav id="colorNav">
+		<div id="stbox">
+			<strong>Studentthinkbox</strong>
+		</div>
+
+		<ul class="menu">
+			<li class="green">
+				<a href="#" class="icon-home" onclick="displayhome();"> Home</a>
+				<ul class="submenu">
+					<li><a href="#" onclick="displayhome();">Home</a></li>
+				</ul>
+			</li>
+			<li class="white">
+				<a href="about_us.htm" class="icon-search"> About Us</a>
+				<ul class="submenu">
+					<li><a href="about_us.htm" onclick="changecontent('Genesis');">Genesis</a></li>
+					<li><a href="about_us.htm" onclick="changecontent('Vision');">Vision</a></li>
+					<li><a href="about_us.htm" onclick="changecontent('Mission');">Mission</a></li>
+					<li><a href="about_us.htm" onclick="changecontent('Leader');">Leadership</a></li>
+					<li><a href="about_us.htm" onclick="changecontent('Reach');">Reach & Presence</a></li>
+				</ul>
+			</li>
+			<li class="red">
+				<a href="our_services.htm" class="icon-globe"> Our Services</a>
+				<ul class="submenu">
+					<li><a href="our_services.htm" onclick="changecontent('Value');">Value Education</a></li>
+					<li><a href="our_services.htm" onclick="changecontent('Career');">Career Counseling</a></li>
+					<li><a href="our_services.htm" onclick="changecontent('Wisdom');">Wisdom Literatures</a></li>
+					<li><a href="our_services.htm" onclick="changecontent('Mentoring');">Mentoring Students</a></li>
+					<li><a href="our_services.htm" onclick="changecontent('Arjuna');">Arjuna Homes</a></li>
+				</ul>
+			</li>
+			<li class="blue">
+				<a href="our_publications.htm" class="icon-book"> Our Publications</a>
+				<ul class="submenu">
+					<li><a href="our_publications.htm">Art of Concentration</a></li>
+					<li><a href="our_publications.htm">Time Management</a></li>
+				</ul>
+			</li>
+			<li class="yellow">
+				<a href="our_solutions.htm" class="icon-cloud" > Our Solutions</a>
+				<ul class="submenu">
+					<li><a href="our_solutions.htm" onclick="changecontent('Problem');">Problem</a></li>
+					<li><a href="our_solutions.htm" onclick="changecontent('Enlightenment');">Enlightenment</a></li>
+					<li><a href="our_solutions.htm" onclick="changecontent('Example');">Example</a></li>
+					<li><a href="our_solutions.htm" onclick="changecontent('Environment');">Environment</a></li>
+					<li><a href="our_solutions.htm" onclick="changecontent('Engagement');">Engagement</a></li>
+				</ul>
+			</li>
+			<li class="purple">
+				<a href="#" class="icon-phone"> Contact Us</a>
+				<ul class="submenu">
+					<li><a href="#">Contact us</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+<!-- ************************************************
+				things being used in slider
+									starts
+		**********************************************   -->
+	<!-- it works the same with all jquery version from 1.x to 2.x -->
+	<script type="text/javascript" src="./slider/jquery-1.9.1.min.js"></script>
+	<!-- use jssor.slider.mini.js (40KB) instead for release -->
+	<!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
+	<script type="text/javascript" src="./slider/jssor.js"></script>
+	<script type="text/javascript" src="./slider/jssor.slider.js"></script>
+	<script>
+			jQuery(document).ready(function ($) {
+					var options = {
+							$AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+							$AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+							$PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+
+							$ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+							$SlideDuration: 800,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+							$MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+							//$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+							//$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+							$SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
+							$DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+							$ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+							$UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+							$PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+							$DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+							$ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
+									$Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+									$ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+									$AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+									$Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
+							},
+
+							$ThumbnailNavigatorOptions: {
+									$Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+									$ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+									$ActionMode: 1,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
+									$AutoCenter: 0,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
+									$Lanes: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
+									$SpacingX: 3,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+									$SpacingY: 3,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+									$DisplayPieces: 9,                              //[Optional] Number of pieces to display, default value is 1
+									$ParkingPosition: 260,                          //[Optional] The offset position to park thumbnail
+									$Orientation: 1,                                //[Optional] Orientation to arrange thumbnails, 1 horizental, 2 vertical, default value is 1
+									$DisableDrag: false                            //[Optional] Disable drag or not, default value is false
+							}
+					};
+
+					var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+					//responsive code begin
+					//you can remove responsive code if you don't want the slider scales while window resizes
+					function ScaleSlider() {
+							var bodyWidth = document.body.clientWidth;
+							if (bodyWidth)
+									jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 980));
+							else
+									window.setTimeout(ScaleSlider, 30);
+					}
+					ScaleSlider();
+
+					$(window).bind("load", ScaleSlider);
+					$(window).bind("resize", ScaleSlider);
+					$(window).bind("orientationchange", ScaleSlider);
+					//responsive code end
+			});
+	</script>
+	<!-- ************************************************
+					things being used in slider
+											ends
+			**********************************************   -->
+
+	<div class="page-content">
+<!-- *********************
+				Slider starts
+		********************* -->
+		<div style="position: relative; width: 100%; background-color: #003399; overflow: hidden;">
+        <div style="position: relative; left: 50%; width: 5000px; text-align: center; margin-left: -2500px;">
+            <!-- Jssor Slider Begin -->
+            <div id="slider1_container" style="position: relative; margin: 0 auto;
+                top: 0px; left: 0px; width: 980px; height: 400px; background: url(./slider/main_bg.jpg) top center no-repeat;">
+                <!-- Loading Screen -->
+                <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
+                        top: 0px; left: 0px; width: 100%; height: 100%;">
+                    </div>
+                    <div style="position: absolute; display: block; background: url(./slider/loading.gif) no-repeat center center;
+                        top: 0px; left: 0px; width: 100%; height: 100%;">
+                    </div>
+                </div>
+                <!-- Slides Container -->
+                <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 980px;
+                    height: 400px; overflow: hidden;">
+                    <div>
+                        <div style="position: absolute; width: 480px; height: 300px; top: 10px; left: 10px;
+                            text-align: left; line-height: 1.8em; font-size: 12px;">
+                            <br />
+                            <span style="display: block; line-height: 1em; text-transform: uppercase; font-size: 52px;
+                                color: #FFFFFF;">Mentoring</span>
+                            <br />
+                            <br />
+                            <span style="display: block; line-height: 1.1em; font-size: 2em; color: #FFFFFF;">
+                                Personal care
+                            </span>
+                            <br />
+                            <span style="display: block; line-height: 1.1em; font-size: 1.5em; color: #FFFFFF;">
+                                One who cares for you, guides you without judgement, committed to you. Arjuna Mentors exemplify these qualities. Students need to deal with stress, peer pressure, performance etc.
+                            </span>
+                            <br />
+                            <br />
+                            <a href="#">
+                                <img src="./slider/find-out-more-bt.png" border="0" alt="auction slider" width="215"
+                                     height="50" />
+                            </a>
+                        </div>
+                        <img src="./slider/s2.png" style="position: absolute; top: 23px; left: 480px; width: 500px; height: 300px;" />
+                        <img u="thumb" src="./slider/s2t.jpg" />
+                    </div>
+                    <div>
+                        <div style="position: absolute; width: 480px; height: 300px; top: 10px; left: 10px;
+                            text-align: left; line-height: 1.8em; font-size: 12px;">
+                            <span style="display: block; line-height: 1em; text-transform: uppercase; font-size: 52px;
+                                color: #FFFFFF;">Nurturing</span>
+                            <br />
+                            <br />
+                            <span style="display: block; line-height: 1.1em; font-size: 2.5em; color: #FFFFFF;">
+                                Leadership skills
+                            </span>
+                            <br />
+                            <span style="display: block; line-height: 1.1em; font-size: 1.5em; color: #FFFFFF;">
+                                It's essential. We address the need the students have felt over a period of last few decades - the period of evolution of modern education.
+                            </span>
+                            <br />
+                            <br />
+                            <a href="#">
+                                <img src="./slider/find-out-more-bt.png" border="0" alt="ebay slideshow" width="215"
+                                     height="50" />
+                            </a>
+                        </div>
+                        <img src="./slider/s3.png" style="position: absolute; top: 23px; left: 480px; width: 500px; height: 300px;" />
+                        <img u="thumb" src="./slider/s3t.jpg" />
+                    </div>
+                    <div>
+                        <div style="position: absolute; width: 480px; height: 300px; top: 10px; left: 10px;
+                            text-align: left; line-height: 1.8em; font-size: 12px;">
+                            <span style="display: block; line-height: 1em; text-transform: uppercase; font-size: 52px;
+                                color: #FFFFFF;">Career</span>
+                            <br />
+                            <span style="display: block; line-height: 1.1em; font-size: 2.5em; color: #FFFFFF;">
+                                Counselling
+                            </span>
+                            <br />
+                            <span style="display: block; line-height: 1.1em; font-size: 1.5em; color: #FFFFFF;">
+                                Decisions making has always been a difficult task. Especially when it is about career. Arjuna Group members guide the students wisely by making them aware of the various options and their pros & cons.
+                            </span>
+                            <br />
+                            <br />
+                            <a href="#">
+                                <img src="./slider/find-out-more-bt.png" border="0" alt="listing slider" width="215"
+                                     height="50" />
+                            </a>
+                        </div>
+                        <img src="./slider/s4.png" style="position: absolute; top: 23px; left: 480px; width: 500px; height: 300px;" />
+                        <img u="thumb" src="./slider/s4t.jpg" />
+                    </div>
+                    <div>
+                        <div style="position: absolute; width: 480px; height: 300px; top: 10px; left: 10px;
+                            text-align: left; line-height: 1.8em; font-size: 12px;">
+                            <br />
+                            <span style="display: block; line-height: 1em; text-transform: uppercase; font-size: 52px;
+                                color: #FFFFFF;">Value</span>
+                            <br />
+                            <br />
+                            <span style="display: block; line-height: 1.1em; font-size: 2.5em; color: #FFFFFF;">
+                                Education
+                            </span>
+                            <br />
+                            <span style="display: block; line-height: 1.1em; font-size: 1.5em; color: #FFFFFF;">
+                                Education without Values is like a ship without compass or a body without a heart. We address the needs of parents, teachers and students by conducting various seminars, workshops and group discussions.
+                            </span>
+                            <br />
+                            <br />
+                            <a href="#">
+                                <img src="./slider/find-out-more-bt.png" border="0" alt="ebay store slider" width="215"
+                                     height="50" />
+                            </a>
+                        </div>
+                        <img src="./slider/s5.png" style="position: absolute; top: 23px; left: 480px; width: 500px; height: 300px;" />
+                        <img u="thumb" src="./slider/s5t.jpg" />
+                    </div>
+                    <div>
+                        <div style="position: absolute; width: 480px; height: 300px; top: 10px; left: 10px;
+                            text-align: left; line-height: 1.8em; font-size: 12px;">
+                            <span style="display: block; line-height: 1em; text-transform: uppercase; font-size: 52px;
+                                color: #FFFFFF;">Wisdom</span>
+                            <br />
+                            <span style="display: block; line-height: 1.1em; font-size: 2.5em; color: #FFFFFF;">
+                                Literature
+                            </span>
+                            <br />
+                            <span style="display: block; line-height: 1.1em; font-size: 1.5em; color: #FFFFFF;">
+                                Wisdom is essential. And books are the basis. It is said that a book is one's best guide. Arjuna Group prepares and publishes world class literatures specific to student community.
+                            </span>
+                            <br />
+                            <br />
+                            <a href="#">
+                                <img src="./slider/find-out-more-bt.png" border="0" alt="listing template slider"
+                                     width="215" height="50" />
+                            </a>
+                        </div>
+                        <img src="./slider/s6.png" style="position: absolute; top: 23px; left: 480px; width: 500px; height: 300px;" />
+                        <img u="thumb" src="./slider/s6t.jpg" />
+                    </div>
+                    <div>
+                        <div style="position: absolute; width: 480px; height: 300px; top: 10px; left: 10px;
+                            text-align: left; line-height: 1.8em; font-size: 12px;">
+                            <br />
+                            <span style="display: block; line-height: 1em; text-transform: uppercase; font-size: 52px;
+                                color: #FFFFFF;">Empowerment and Education</span>
+                            <br />
+                            <span style="display: block; line-height: 1.1em; font-size: 2.5em; color: #FFFFFF;">
+                                With a culture of love
+                            </span>
+                            <br />
+                            <span style="display: block; line-height: 1.1em; font-size: 1.5em; color: #FFFFFF;">
+                                Write details here.
+                            </span>
+                            <br />
+                            <br />
+                            <a href="#">
+                                <img src="./slider/find-out-more-bt.png" border="0" alt="auction template slider"
+                                     width="215" height="50" />
+                            </a>
+                        </div>
+                        <img src="./slider/s7.png" class="img-responsive" style="position: absolute; top: 23px; left: 480px; width: 500px; height: 300px;" />
+                        <img u="thumb" src="./slider/s7t.jpg" />
+                    </div>
+                    <div>
+                        <div style="position: absolute; width: 480px; height: 300px; top: 10px; left: 10px;
+                            text-align: left; line-height: 1.8em; font-size: 12px;">
+                            <span style="display: block; line-height: 1em; text-transform: uppercase; font-size: 52px;
+                                color: #FFFFFF;">Our 4 Principles</span>
+                            <br />
+                            <span style="display: block; line-height: 1.1em; font-size: 2.5em; color: #FFFFFF;">
+                                Enlightenment Example Engagement Environment
+                            </span>
+                            <br />
+                            <span style="display: block; line-height: 1.1em; font-size: 1.5em; color: #FFFFFF;">
+                                Write some details here.
+                            </span>
+                            <br />
+                            <br />
+                            <a href="#">
+                                <img src="./slider/find-out-more-bt.png" border="0" alt="ebay slider" width="215"
+                                     height="50" />
+                            </a>
+                        </div>
+                        <img src="./slider/s8.png" style="position: absolute; top: 23px; left: 480px; width: 500px; height: 300px;" />
+                        <img u="thumb" src="./slider/s8t.jpg" />
+                    </div>
+                </div>
+
+                <!--#region Arrow Navigator Skin Begin -->
+                <!-- Help: http://www.jssor.com/development/slider-with-arrow-navigator-jquery.html -->
+                <style>
+                    /* jssor slider arrow navigator skin 07 css */
+                    /*
+                    .jssora07l                  (normal)
+                    .jssora07r                  (normal)
+                    .jssora07l:hover            (normal mouseover)
+                    .jssora07r:hover            (normal mouseover)
+                    .jssora07l.jssora07ldn      (mousedown)
+                    .jssora07r.jssora07rdn      (mousedown)
+                    */
+                    .jssora07l, .jssora07r {
+                        display: block;
+                        position: absolute;
+                        /* size of arrow element */
+                        width: 50px;
+                        height: 50px;
+                        cursor: pointer;
+                        background: url(./a07.png) no-repeat;
+                        overflow: hidden;
+                    }
+                    .jssora07l { background-position: -5px -35px; }
+                    .jssora07r { background-position: -65px -35px; }
+                    .jssora07l:hover { background-position: -125px -35px; }
+                    .jssora07r:hover { background-position: -185px -35px; }
+                    .jssora07l.jssora07ldn { background-position: -245px -35px; }
+                    .jssora07r.jssora07rdn { background-position: -305px -35px; }
+                </style>
+                <!-- Arrow Left -->
+                <span u="arrowleft" class="jssora07l" style="top: 123px; left: 8px;">
+                </span>
+                <!-- Arrow Right -->
+                <span u="arrowright" class="jssora07r" style="top: 123px; right: 8px;">
+                </span>
+                <!--#endregion Arrow Navigator Skin End -->
+
+            <!--#region Thumbnail Navigator Skin Begin -->
+            <!-- Help: http://www.jssor.com/development/slider-with-thumbnail-navigator-jquery.html -->
+            <style>
+                /* jssor slider thumbnail navigator skin 04 css */
+                /*
+                .jssort04 .p            (normal)
+                .jssort04 .p:hover      (normal mouseover)
+                .jssort04 .pav          (active)
+                .jssort04 .pav:hover    (active mouseover)
+                .jssort04 .pdn          (mousedown)
+                */
+
+                .jssort04 {
+                    position: absolute;
+                    /* size of thumbnail navigator container */
+                    width: 600px;
+                    height: 60px;
+                }
+
+                    .jssort04 .p {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 62px;
+                        height: 32px;
+                    }
+
+                    .jssort04 .t {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                    }
+
+                    .jssort04 .w, .jssort04 .pav:hover .w {
+                        position: absolute;
+                        width: 60px;
+                        height: 30px;
+                        border: #0099FF 1px solid;
+                        box-sizing: content-box;
+                    }
+
+                    .jssort04 .pdn .w, .jssort04 .pav .w {
+                        border-style: dashed;
+                    }
+
+                    .jssort04 .c {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 62px;
+                        height: 32px;
+                        background-color: #000;
+                        filter: alpha(opacity=45);
+                        opacity: .45;
+                        transition: opacity .6s;
+                        -moz-transition: opacity .6s;
+                        -webkit-transition: opacity .6s;
+                        -o-transition: opacity .6s;
+                    }
+
+                    .jssort04 .p:hover .c, .jssort04 .pav .c {
+                        filter: alpha(opacity=0);
+                        opacity: 0;
+                    }
+
+                    .jssort04 .p:hover .c {
+                        transition: none;
+                        -moz-transition: none;
+                        -webkit-transition: none;
+                        -o-transition: none;
+                    }
+
+                    * html .jssort04 .w {
+                        width /**/: 62px;
+                        height /**/: 32px;
+                    }
+            </style>
+            <!-- thumbnail navigator container -->
+            <div u="thumbnavigator" class="jssort04" style="right: 0px; bottom: 0px;">
+                <!-- Thumbnail Item Skin Begin -->
+                <div u="slides" style="bottom: 25px; right: 30px; cursor: default;">
+                    <div u="prototype" class="p">
+                        <div class=w><div u="thumbnailtemplate" class="t"></div></div>
+                        <div class=c></div>
+                    </div>
+                </div>
+                <!-- Thumbnail Item Skin End -->
+            </div>
+            <!--#endregion Thumbnail Navigator Skin End -->
+                <a style="display: none" href="http://www.jssor.com">Bootstrap Slider</a>
+            </div>
+            <!-- Jssor Slider End -->
+        </div>
+    </div>
+<!-- **************************
+						Slider ends
+		************************** -->
+	</div>
+	<script type="text/javascript">
+	 	var header=getElementById("contentgenesis");
+		var articleblocker=getElementById("article-content);
+		header.style.display="block";
+			     articleblocker.style.display="none";
+		function changecontent(page){
+		var header=getElementById("contentgenesis");
+		var articleblocker=getElementById("article-content);
+	        switch(page){
+		case "Genesis": header.style.display="block";
+			     articleblocker.style.display="none";
+			     break;
+}}		
+        </script>
+	 
+
+
+
+
+	<div id="statement" style="font-size:18px;text-align:center">
+		 <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="jqueryfin.js"></script>
+    <script type="text/javascript" src="jssor.js"></script>
+    <script type="text/javascript" src="jssor.slider.js"></script>
+        <div id="contentabout">
+		<h1>ABOUT US</h1>
+		<p>Today's  world has no deficiency of facilities, amenities, luxuries.. dearth is of selfless service attitude. It is this selfless spirit which the group stands for. Student life is the tender age where the ideologies formed are carried over throughout one's life.. It is very unfortunate that today's students are given a very self-centric, egoistic, unrealistic world view. It is not surprising to see, therefore, that the student community is susceptible to vices of all sorts. Wisdom tells us that a student leading a life of purity would become a great servant-leader for the world in future.</p>
+ 		<p>ARJUNA Group is meant to serve the student community by systematically giving them education and training in the values for principle centered living. Purity can't be sustained without devotion to God.</p>
+ 		<p>The group in a secular way encourages service to God and humanity. With a view to achieve the aforementioned purposes, the group publishes and distributes ARJUNA books.</p>
+	</div>    
+        <div id="slider2_container1" style="position: relative; top:-400px;  width: 602px; height: 331px; background: #484848; overflow: visible; ">
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: relative;background: linear-gradient(#888888,white); top: 29px;margin-left: auto ;margin-right: auto ; width: 1343px; height: 300px; border: 1px solid gray; -webkit-filter: blur(0px); background-color: #fff; overflow: hidden;">
+            <div>
+                <div style="margin: 10px; overflow: visible; color: #000;">
+	    		
+			<h1>Genesis</h1><ul>
+			<li>ARJUNA Group( a non-profit initiative) is a group of successful and selfless individual , who have a passion to serve the student community.</li><li> The group was founded in the year 2013 by a team of IITians. The balance of personal success and selfless service is what the group strives for.</li>
+	        	</ul>
+			</div>
+                <div u="thumb" >Genesis</div>
+            </div>
+            <div>
+                <div style="margin: 10px; overflow: visible; color: #000;"><h1>Vision</h1>
+		<p>A country where youths value and practice the importance of Character, Competence and Devotion & spread it to the whole world.</p></div>
+                <div u="thumb">vision</div>
+            </div>
+            <div>
+                <div style="margin: 10px; overflow: visible; color: #000;"><h1>Mission</h1>
+		<p>To spread the culture of excellence and ethics amidst the student community with the spirit of selfless service</p></div>
+                <div u="thumb">Mission</div>
+            </div>
+            <div>
+                <div style="margin: 10px; overflow: visible; color: #000; background: "><h1>Leadership</h1>
+		<p>CONTENT NOT READY</p></div>
+                <div u="thumb">Leadership</div>
+            </div>
+            <div>
+                <div style="margin: 10px; overflow: visible; color: #000;"><h1>Outreach</h1>
+		<ul><li>50000 students touched</li><li>10000 books distributed</li><li>In 10 cities across India</li></div>
+                <div u="thumb">Reach and Presence</div>
+            </div>
+	    	
+	     
+        </div>
+        <!--#region ThumbnailNavigator Skin Begin -->
+        <link href="./stylesheet/slider.css" rel="stylesheet" type="text/css">
+	
+
+        <div u="thumbnavigator" class="jssort12" style="margin-left: auto ;margin-right: auto ;">
+            <!-- Thumbnail Item Skin Begin -->
+            <div u="slides" style="cursor: default; margin-left: auto ;margin-right: auto ; border-left: 1px solid yellow;">
+                <div u="prototype" class="p">
+                    <div class=w><div u="thumbnailtemplate" class="c"></div></div>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+        <!--#endregion ThumbnailNavigator Skin End -->
+
+        <a style="display: none" href="http://www.jssor.com">Bootstrap Slider</a>
+    </div>
+    <!-- Jssor Slider End -->
+		<div id="contentgenesis">
+		<h1>Genesis</h1><ul>
+	<li>ARJUNA Group( a non-profit initiative) is a group of successful and selfless individual , who have a passion to serve the student community.</li><li> The group was founded in the year 2013 by a team of IITians. The balance of personal success and selfless service is what the group strives for.</li>
+	        </ul>
+		</div>
+		<div id="contentvision">
+		<h1>Vision</h1>
+		<p>A country where youths value and practice the importance of Character, Competence and Devotion & spread it to the whole world.</p>
+		</div>	
+		<div id="contentmission">
+		<h1>Mission</h1>
+		<p>To spread the culture of excellence and ethics amidst the student community with the spirit of selfless service</p>
+		</div>
+		<div id="contentleader">
+		<h1>Leadership</h1>
+		<p>CONTENT NOT READY</p>
+		</div>
+		<div id="contentreach">
+		<h1>Outreach</h1>
+		<ul><li>50000 students touched</li><li>10000 books distributed</li><li>In 10 cities across India</li>
+		</div>
+		<div id="contentourservices">
+		<h1>OUR SERVICES</h1>
+		<p>ARJUNA Group offers various services to the student community to empower them with the Knowledge, Skills and Values for Success and Satisfaction. We stand for selfless service and thus charge no fee for our services from the students.</p>
+ 		</div>
+		<div id="contentvalue">
+		<h1>Value education for teenagers</h1>
+		<p>ARJUNA Group members visit various schools, colleges, coaching institutes as well as organize talks to impart Value Education. Education without Values is like a Ship without Compass or a Body without Heart! It's essential. We address the need which parents, teachers and the students have felt over a period of last few decades - the period of evolution of modern education. We conduct seminars, workshops and group discussion on topics such as:</p>
+		<ul><li>Art of Concentration</li>
+	        <li>Power of Habits</li>
+	        <li>Exam Temperament</li>
+	        <li>Time Management</li>
+	        <li>Self Confidence and many more\85</li></ul>
+		</div>
+		
+		<div id="contentcareer">
+		<h1>Career Counseling</h1>
+  		<p>	Decision making has always been a difficult task. Especially so when it is about the career. So much is at stake! Mistakes can be very expensive. ARJUNA Group members guide the students wisely by making them aware of the various options and their pros & cons. We discuss, we evaluate together with the student, and we assist the student to understand which option is best for his/her temperament.</p>
+
+		</div>
+		
+		<div id="contentwisdom">
+		<h1>Distributing Wisdom literature</h1>
+<p>Wisdom is essential and books are the basis. It is said that a book is one's best guide. ARJUNA Group prepares and publishes world class literature specific to student community. We distill the student specific wisdom from the plethora of literature - both ancient and modern - and present it in an interesting way. ARJUNA Books are given to students at subsidized prices.</p>
+
+		</div>
+		
+		<div id="contentmentoring">
+		<h1>Mentoring Students</h1>
+<p>A selfless mentor can make all the difference. One who understands you , one who supports you, who guides you without judgement, who care for you, who puts principles before pleasure, who is committed to you and most importantly who is an ideal role model. ARJUNA mentors exemplify these qualities. Students need mentorship to deal with stress, peer pressure, inferiority complex, inconsistent performance, relationship issues, old habits, lack of motivation, unhealthy attitudes, etc.</p>
+
+		</div>
+		
+		<div id="contentarjuna">
+		<h1>ARJUNA Homes</h1>
+		<ul><li>	A home away from home\85</li>
+		<li>Students miss their home but now they will not! ARJUNA Homes provide the best environment for the students to learn and live. ARJUNA Homes are equipped with proper facilities, provide nutritious delicious lacto-vegetarian food and sustain a fabric of friendly relationships. Students need an environment where they can practice the moral and spiritual values which will foster their overall development. ARJUNA Homes maintain the culture of enthusiasm, service, love and care. It is a nest for future leaders\85</li>
+		</ul>
+		</div>
+		<div id="contentenlightenment">
+		<h1>ENLIGHTENMENT</h1>
+		<p>Learning essential spiritual and moral values through Value Education Programs and Wisdom Literatures.</p>
+
+		</div>
+		<div id="contentexample">
+		<h1>EXAMPLE</h1>
+		<p>Interaction and Mentoring by the ARJUNA Mentors will provide students a live example of the values they learnt.</p>
+
+		</div>
+		<div id="contentenvironment">
+		<h1>ENVIRONMENT</h1>
+		<p>Suitable environment at ARJUNA Homes would enable the students to live and practice these values.</p>
+ 
+
+		</div>
+		<div id="contentengagement">
+		<h1>ENGAGEMENT</h1>
+		<p>Students need to engage their skills and talents in a positive way so as to feel inner satisfaction. ARJUNA provides such opportunities</p>
+
+		</div>
+		<div id="contentproblem">
+		<h1>PROBLEM</h1>
+		<p>PRESENT SCENARIO STUDENT COMMUNITY</p>
+		<ul><li>Today's youth is facing tremendous challenges both externally and internally. They DO NEED help to overcome these vices and be successful. ARJUNA Group has the solution.</li>
+		<li>PLEASE HELP US OVERCOME THESE CHALLENGES</li>
+		</ul>
+		<p>Focus on: </p>
+		<ol><li>Inattention</li>
+		<li>Stress</li>
+		<li>Teen addictions</li>
+		<li>Mind control</li>
+		<li>Time Management</li>	
+		<li>Power of habits</li>
+		</ol>
+		<p>
+Undoubtedly today's students face myriad challenges - both internal and external. Unfortunately very few are genuinely interested in uplifting student community. ARJUNA Group has been formed with the earnest desire to fill this gap. We offer time-tested solutions coming from the age old tradition of India - adapted and administered - combined with the best of the modern rational thought and technology.</p><p> We have analyzed the problems faced by the students and have come up with the solution based on our experience of over a decade in guiding students.
+</p>
+
+
+
+		</div>
+	</div>
+	
+	<div id="article-content">
+		
+		<ul class="r1">
+			<li><div class="c11"><img id="c11-" src="./slider/paper.png" style="  width: 50%; height: 195px;" /><h4>JEE Papers<br>Sample Papers</h4></div></li>
+			<li><div class="c12"><img src="./slider/tips.png" style="  width: 50%; height: 195px;" /><h4>JEE/AIEEE Study Tips</h4></div></li>
+			<li><div class="c13"><img src="./slider/q&a.png" style="  width: 50%; height: 195px;" /><h4>Q & A Forums</h4></div></li>
+			<li><div class="c14"><img src="./slider/ebook.png" style="  width: 50%; height: 195px;" /><h4>Ebooks</h4></div></li>
+		</ul>
+		<ul class="r2">
+			<li><div class="c21"></div></li>
+			<li><div class="c22"></div></li>
+			<li><div class="c23"></div></li>
+			<li><div class="c24"></div></li>
+		</ul>
+		
+		
+	</div>
+	<div id="contenthome">
+	
+	</div>
+	<div id="footer">
+		<ul class="f1">
+			<span>New Footer</span>
+			<li><div class="f11"></div></li>
+			<li><div class="f12"></div></li>
+			<li><div class="f13"></div></li>
+			<li><div class="f14"></div></li>
+		</ul>
+	</div>
+
+	<!-- Footer goes here -->
+	<footer class="footer-distributed">
+			<div class="footer-left">
+				<img src="./images/logo.gif">
+				<div class="footer-group-about">
+					<b>Arjuna</b> Group (a non-profit initiative) is a group of successful and selfless individuals, who have a passion to serve the student community. The group was founded in the year 2013 by a team of <b>IITians</b>. The balance of personal success and selfless service is what the group strives for.
+				</div>
+				<div class="footer-social">
+					<div class="footer-icons">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<a href="#"><i class="fa fa-github"></i></a>
+					</div>
+				</div>
+				<p class="footer-group-copyright">Arjuna &copy; 2015</p>
+			</div>
+			<div class="line1"></div>
+			<div class="footer-middle">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p class="footer-address"><span style="font-size: 14px;">#1, Karunambigai Colony, East Mada Street</span><br> Velachery, Chennai, India</p>
+				</div>
+				<div>
+					<i class="fa fa-phone"></i>
+					<p class="footer-phone">+91 44 1234 5678</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p class="footer-mail"><a href="mailto:info.arjunagroup@gmail.com">info.arjunagroup@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="line2"></div>
+			<div class="footer-right">
+				<span><em><b>About Arjuna</b></em></span>
+				<ul>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">News & Announcements</a></li>
+					<li><a href="#">FAQs</a></li>
+					<li><a href="#">Donate to Arjuna</a></li>
+				</ul>
+			</div>
+		</footer>
+
+</body>
+</html>
